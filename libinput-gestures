@@ -109,7 +109,7 @@ class SWIPE(GESTURE):
     def end(self):
         'Action this gesture at the end of a motion sequence'
         # Require movement beyond a small threshhold.
-        if abs(self.data[0] - self.data[1]) >= 70:
+        if abs(self.data[0] - self.data[1]) >= 50:
             if abs(self.data[0]) > abs(self.data[1]):
                 motion = 'left' if self.data[0] < 0 else 'right'
             else:
